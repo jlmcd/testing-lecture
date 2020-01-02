@@ -1,68 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Testing Lecture
 
-In the project directory, you can run:
+Lesson Flow:
 
-### `npm start`
+1. First have everyone spin up a react app using `create-react-app`. Jest is installed as part of the dependencies included in create-react-app. 
+    * If you were using jest in another setting, you would install it with the command:
+        * `npm install --save-dev jest`.
+        * This adds jest as a dependency for use in a development environment (dev dependency).
+        * You would also need to add a script for running jest in the package.json file:
+        ```json
+        "scripts": {
+          "test": "jest"
+        }
+        ```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Have the class run the built-in test with this command:
+    * `npm run test`
+    * _NOTE:_ Encourage students to display their terminal on the right side of vscode so scrolling to see things isn't an issue.
+    * Jest looks for test files with the naming scheme `filename.test.js`
+    * Jest displays the test suites (test files)
+    * There are two modes of thought when it comes to organizing your test files:
+        1. Putting all of your test code into a neatly organized `/tests` directory.
+        2. Putting your test code next to the files they are testing.
+    * We will be placing our test code in a `/tests` directory in the `src` folder.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+3. Once everyone has jest running properly (the class should have one test passing by default), have them delete the App.test.js file. We will use another set of files to showcase the syntax and functionality of a jest test.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+4. Create a `/tests` directory inside the `src` folder. This is where we will compile and organize our test files.
+    * Inside the `/tests` folder, create a file called `functions.test.js`.

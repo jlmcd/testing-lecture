@@ -18,7 +18,8 @@ class App extends React.Component {
       }
     ],
     id: 4,
-    input: ''
+    input: '',
+    num: 0
   }
 
   addTodo() {
@@ -38,7 +39,10 @@ class App extends React.Component {
         {this.state.todos.map(task => (
           <h2 key={task.id}>{task.title}</h2>
         ))}
-        <input value={this.state.input} onChange={e => this.setState({ input: e.target.value })} />
+        <input
+          value={this.state.input}
+          onChange={e => this.setState({ input: e.target.value })}
+        />
         <button onClick={() => this.addTodo()}>Add Todo</button>
       </div>
     )

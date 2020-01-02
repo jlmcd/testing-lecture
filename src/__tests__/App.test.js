@@ -29,7 +29,7 @@ it('Can change the input', () => {
   })
   const input = container.querySelector('input')
   act(() => {
-    Simulate.change(input, { target: { value: 'Practice some more' }})
+    Simulate.change(input, { target: { value: 'Practice some more' } })
   })
   expect(input.value).toBe('Practice some more')
 })
